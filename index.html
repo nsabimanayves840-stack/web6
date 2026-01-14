@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Safe and fast rides in Kigali. Book your ride now!">
+    <title>PICK ME UP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Reset ===== */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; }
+
+        .container { max-width: 1200px; margin: auto; padding: 20px; }
+
+        /* ===== Navbar ===== */
+        .navbar { background: #1a1a2e; color: #fff; padding: 15px 0; position: sticky; top: 0; z-index: 10; }
+        .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: 700; }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { color: #fff; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: #fdb813; }
+
+        /* ===== Hero ===== */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1605460375648-278bcbd579a6?fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: #fff; text-align: center; padding: 150px 20px;
+        }
+        .hero h2 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+        .btn { background: #fdb813; color: #1a1a2e; padding: 10px 25px; text-decoration: none; border-radius: 5px; margin-right: 10px; transition: 0.3s; }
+        .btn:hover { background: #ffa500; }
+        .btn-outline { background: transparent; border: 2px solid #fdb813; color: #fdb813; }
+        .btn-outline:hover { background: #fdb813; color: #1a1a2e; }
+
+        /* ===== How It Works ===== */
+        .how-it-works { text-align: center; padding: 50px 0; }
+        .steps { display: flex; flex-wrap: wrap; justify-content: space-around; margin-top: 30px; }
+        .step { flex: 1; min-width: 250px; margin: 10px; padding: 20px; background: #f5f5f5; border-radius: 8px; }
+
+        /* ===== Ride Cards ===== */
+        .ride-cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px; }
+        .ride-card { background: #f5f5f5; padding: 20px; border-radius: 8px; width: 250px; text-align: center; }
+        .btn-small { padding: 8px 15px; font-size: 0.9rem; }
+
+        /* ===== Driver Form ===== */
+        .drivers form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 15px; }
+        .form-group input { padding: 10px; border-radius: 5px; border: 1px solid #ccc; }
+
+        /* ===== Contact ===== */
+        .contact { text-align: center; padding: 50px 20px; }
+        .socials a { margin: 0 10px; text-decoration: none; color: #1a1a2e; font-weight: bold; }
+
+        /* ===== Footer ===== */
+        .footer { background: #1a1a2e; color: #fff; text-align: center; padding: 20px 0; margin-top: 40px; }
+
+        /* ===== Responsive ===== */
+        @media(max-width: 768px){
+            .steps { flex-direction: column; }
+            .ride-cards { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">PICK ME UP</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#rides">Rides</a></li>
+                <li><a href="#drivers">Drivers</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h2>Safe and Fast Rides, Anytime</h2>
+            <p>Book your ride in Kigali easily with PICK ME UP.</p>
+            <a href="#rides" class="btn">Book a Ride</a>
+            <a href="#drivers" class="btn btn-outline">Become a Driver</a>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works container">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <h3>1. Choose Your Ride</h3>
+                <p>Select from our available options based on your destination.</p>
+            </div>
+            <div class="step">
+                <h3>2. Confirm Pickup</h3>
+                <p>Enter your location and we’ll send a driver immediately.</p>
+            </div>
+            <div class="step">
+                <h3>3. Arrive Safely</h3>
+                <p>Our professional drivers ensure you reach your destination safely.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ride Options -->
+    <section id="rides" class="rides container">
+        <h2>Our Ride Options</h2>
+        <div class="ride-cards">
+            <div class="ride-card">
+                <h3>Economy</h3>
+                <p>Affordable rides for quick trips.</p>
+                <p><strong>Price:</strong> 5,000–10,000 RWF</p>
+                <a href="#contact" class="btn btn-small">Book Now</a>
+            </div>
+            <div class="ride-card">
+                <h3>Premium</h3>
+                <p>Comfortable and faster rides with premium vehicles.</p>
+                <p><strong>Price:</strong> 10,000–20,000 RWF</p>
+                <a href="#contact" class="btn btn-small">Book Now</a>
+            </div>
+            <div class="ride-card">
+                <h3>Luxury</h3>
+                <p>High-end vehicles for a premium experience.</p>
+                <p><strong>Price:</strong> 20,000–40,000 RWF</p>
+                <a href="#contact" class="btn btn-small">Book Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Driver Signup -->
+    <section id="drivers" class="drivers container">
+        <h2>Become a Driver</h2>
+        <form id="driverForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="vehicle">Vehicle Type</label>
+                <input type="text" id="vehicle" required>
+            </div>
+            <div class="form-group">
+                <label for="idUpload">Upload ID / License</label>
+                <input type="file" id="idUpload" required>
+            </div>
+            <button type="submit" class="btn">Join Now</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact container">
+        <h2>Contact Us</h2>
+        <p>Email: info@pickmeup.com | Phone: +250 78 123 4567</p>
+        <p>Follow us on social media:</p>
+        <div class="socials">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 PICK ME UP. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Driver form submission
+        document.getElementById('driverForm').addEventListener('submit', function(e){
+            e.preventDefault();
+            alert('Thank you! Your driver application has been submitted.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
